@@ -13,9 +13,6 @@ export class User {
   @prop({ type: () => String, required: true })
   password: string;
 
-  @prop({ type: () => Number, default: 0 })
-  tokenVersion: number;
-
   public static async getAllUsers(this: ReturnModelType<typeof User>) {
     return this.find({});
   }
